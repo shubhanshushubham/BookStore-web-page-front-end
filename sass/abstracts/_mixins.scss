@@ -1,0 +1,29 @@
+@mixin title-animation($anim-name) {
+  animation-name: $anim-name;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@mixin response($breakpoint) {
+  @if $breakpoint == -bigDesk {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  @if $breakpoint == -tabLand {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == -tabPort {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == -phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}

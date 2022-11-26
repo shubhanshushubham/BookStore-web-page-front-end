@@ -1,0 +1,30 @@
+.u-center-text {
+  text-align: center !important;
+}
+.bottom-margin-big {
+  margin-bottom: 6rem !important;
+
+  @include response(-phone) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.bottom-margin-medium {
+  margin-bottom: 3rem !important;
+}
+
+.top-bottom-margin-small {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+.top-margin-big {
+  margin-top: 8rem !important;
+
+  @include response(-tabLand) {
+    margin-top: 6rem !important;
+  }
+}
+
+.top-margin-small {
+  margin-top: 4rem !important;
+}

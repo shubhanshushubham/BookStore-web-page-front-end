@@ -1,0 +1,99 @@
+.book-image {
+  width: 35%;
+  box-shadow: 0 2rem 3rem rgba($color-black, 0.2);
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.5s;
+
+  @include response(-tabLand) {
+    width: 43%;
+  }
+
+  @include response(-tabPort) {
+    width: 15rem;
+  }
+}
+
+.book1 {
+  left: 0;
+  top: -1em;
+
+  &:hover {
+    z-index: 11;
+    box-shadow: 0 2.5rem 3rem rgba($color-black, 0.4);
+    transform: translateY(-0.5rem) scale(1.1);
+    outline: 1.5rem solid $color-primary;
+    outline-offset: 1.5rem;
+  }
+
+  @include response(-tabLand) {
+    top: 0;
+  }
+
+  @include response(-tabPort) {
+    left: 5rem;
+  }
+
+  @include response(-phone) {
+    left: 0;
+  }
+}
+.book2 {
+  right: 22rem;
+  top: 1rem;
+
+  &:hover {
+    z-index: 11;
+    box-shadow: 0 2.5rem 3rem rgba($color-black, 0.4);
+    transform: translateY(-0.5rem) scale(1.1);
+    outline: 1.5rem solid $color-primary;
+    outline-offset: 1.5rem;
+  }
+
+  @include response(-tabLand) {
+    right: 15rem;
+    top: 2rem;
+  }
+
+  @include response(-tabPort) {
+    right: 50%;
+    transform: translateX(50%);
+    top: 1rem;
+  }
+}
+.book3 {
+  right: 10rem;
+  top: 3rem;
+
+  &:hover {
+    z-index: 11;
+    box-shadow: 0 2.5rem 3rem rgba($color-black, 0.4);
+    transform: translateY(-0.5rem) scale(1.1);
+    outline: 1.5rem solid $color-primary;
+    outline-offset: 1.5rem;
+  }
+
+  @include response(-tabLand) {
+    right: 7rem;
+    top: 4rem;
+  }
+
+  @include response(-tabPort) {
+    top: 0;
+    right: 5rem;
+  }
+
+  @include response(-phone) {
+    right: 0;
+  }
+}
+
+.book-collection {
+  position: relative;
+
+  &:hover .book-image:not(:hover) {
+    transform: scale(0.95);
+    filter: blur(2px);
+  }
+}

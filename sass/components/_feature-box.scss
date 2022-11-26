@@ -1,0 +1,57 @@
+.feature-box {
+  background-color: #fff;
+  display: inline-block;
+  width: 25rem;
+  height: 35rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
+  transition: transform 0.4s;
+  padding: 0.5rem;
+
+  &:hover {
+    transform: translateY(-2rem);
+    // background-color: rgba(#fff, 0.9);
+    box-shadow: 0 1.5rem 2rem rgba($color-black, 0.4);
+  }
+  &:first-child {
+    margin-left: 10rem;
+    @include response(-tabLand) {
+      margin-left: 0;
+    }
+  }
+  &:last-child {
+    margin-right: 10rem;
+    @include response(-tabLand) {
+      margin-right: 0;
+    }
+  }
+
+  @include response(-tabLand) {
+    height: 30rem;
+    width: 20rem;
+  }
+
+  @include response(-phone) {
+    width: 23rem;
+  }
+}
+
+.feature-box:not(:last-child) {
+  @include response(-phone) {
+    margin-bottom: 2rem;
+  }
+}
+
+.feature-icon {
+  font-size: 5rem;
+  color: transparent;
+  background: linear-gradient(
+    to right bottom,
+    rgba($color-secondary, 0.8),
+    rgba($color-primary, 0.8)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline-block;
+}

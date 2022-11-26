@@ -1,0 +1,26 @@
+.heading {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      $color-secondary,
+      $color-primary
+    ),
+    url("../images/library.jfif");
+  background-blend-mode: screen;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90vh, 0 100%);
+  position: relative;
+  &-logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-0.3rem);
+    }
+  }
+  &-logo {
+    width: 10%;
+  }
+}

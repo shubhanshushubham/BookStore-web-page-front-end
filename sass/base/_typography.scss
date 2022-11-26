@@ -1,0 +1,74 @@
+.heading-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  &-main {
+    font-size: 6.4rem;
+    font-weight: 900;
+    letter-spacing: 0.5ch;
+    color: #fff;
+    margin-bottom: 2%;
+    display: block;
+    @include title-animation(moveInleft);
+    @include response(-phone) {
+      font-size: 5rem;
+    }
+  }
+  &-sub {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5ch;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6rem;
+    @include title-animation(moveInright);
+  }
+}
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, $color-secondary, $color-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.2s all;
+
+  &:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  @include response(-tabLand) {
+    font-size: 3rem;
+  }
+  @include response(-tabPort) {
+    font-size: 2.3rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  @include response(-tabLand) {
+    font-size: 1.7rem;
+  }
+}
+.paragraph {
+  font-size: 2rem;
+  line-height: 1.5;
+  @include response(-tabLand) {
+    font-size: 1.7rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}

@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //10px
+
+  @include response(-bigDesk) {
+    font-size: 62.5%; //10px
+  }
+  @include response(-tabLand) {
+    font-size: 56.25%; //9px
+  }
+  @include response(-tabPort) {
+    font-size: 50%; //8px
+  }
+  @include response(-phone) {
+    font-size: 43.75%; //7px
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #777;
+  padding: 3rem;
+
+  @include response(-tabPort) {
+    padding: 0;
+  }
+}

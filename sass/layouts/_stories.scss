@@ -1,0 +1,89 @@
+.section-stories {
+  background-color: rgba($color-grey-light-1, 0.1);
+  padding: 10rem 0;
+  position: relative;
+}
+
+.story {
+  width: 100%;
+  height: 100%;
+  &-card {
+    padding: 6rem;
+    padding-left: 9rem;
+    width: 75%;
+    margin: 7rem auto;
+    height: 25rem;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    transform: skewX(-12deg);
+
+    & > * {
+      transform: skewX(12deg);
+    }
+
+    .story-image {
+      background: linear-gradient(
+        to right bottom,
+        $color-orange-light,
+        $color-orange-dark
+      );
+      width: 15rem;
+      height: 15rem;
+      float: left;
+      left: 2rem;
+      clip-path: circle(50% at 50% 50%);
+      transform: translateX(-3rem) skewX(12deg);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      position: relative;
+
+      &-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        transition: all 0.5s;
+        opacity: 0;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .reviewer {
+        width: 100%;
+        transform: translateY(1rem) scale(1.1);
+        transition: all 0.5s;
+      }
+
+      @include response(-phone) {
+        transform: translateX(-3rem) skewX(0);
+      }
+    }
+
+    &:hover .story-image-caption {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    &:hover .reviewer {
+      filter: blur(3px) brightness(50%);
+      transform: translateY(1rem) scale(1);
+    }
+
+    .story-1-review {
+      font-size: 2.5rem;
+    }
+
+    @include response(-phone) {
+      height: 40rem;
+      border-radius: 0.5rem;
+      transform: skewX(0);
+      padding: 3rem;
+      & > * {
+        transform: skewX(0);
+      }
+    }
+  }
+}

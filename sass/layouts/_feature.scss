@@ -1,0 +1,29 @@
+.feature-container {
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  width: 100%;
+  background-image: linear-gradient(
+      to right bottom,
+      $color-secondary,
+      $color-primary
+    ),
+    url("../images/background-feature.jpg");
+  background-blend-mode: screen;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  clip-path: polygon(0 5vh, 50% 0, 100% 5vh, 100% 100%, 50% 100%, 0 100%);
+
+  @include response(-tabLand) {
+    justify-content: space-around;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  @include response(-phone) {
+    flex-direction: column;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
